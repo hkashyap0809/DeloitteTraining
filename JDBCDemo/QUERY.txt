@@ -1,0 +1,14 @@
+
+create table customer
+(
+	customerId integer,
+	customerName varchar(20),
+	customerAddress varchar(20),
+	billAmount integer
+	)
+	
+	insert into customer values(100, 'Jay', 'Pune', 9800);
+	insert into customer values(200, 'Neha', 'Mumbai', 10000);
+	insert into customer values(300, 'Vaibhav', 'Delhi', 2000);
+
+	delete from customer where customerId =100;

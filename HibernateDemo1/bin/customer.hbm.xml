@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.harshit.entity.Customer" table="CustomerHibernate">
+	
+		<id name="customerId" type="int" column="customerId">
+			<generator class="assigned"/>
+		</id>
+		<property name="customerName" column="customerName"/>
+		<property name="customerAddress" column="customerAddress"/>
+		<property name="billAmount"/>
+	
+
+	</class>
+</hibernate-mapping>
