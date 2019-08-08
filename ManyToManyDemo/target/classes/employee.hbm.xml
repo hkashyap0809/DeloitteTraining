@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.harshit.entity.EmployeeDetails"
+		table="employeeDetails">
+
+		<id name="employeeId" type="int" column="employeeId">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeName" column="employeeName" />
+		<property name="employeeSalary" column="employeeSalary" />
+		<set name="employeeAddress" cascade="save-update" table="employeeAddress">
+		<key column="employeeId"></key>
+		<many-to-many column="aId" class="com.harshit.entity.Address"></many-to-many></set>
+	</class>
+	
+	<class name="com.harshit.entity.Address"
+		table="address">
+
+		<id name="aId" type="int" column="aId">
+			<generator class="assigned" />
+		</id>
+		<property name="city" />
+		<property name="state" />
+	</class>
+</hibernate-mapping>
