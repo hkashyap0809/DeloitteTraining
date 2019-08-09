@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="cust" class="com.harshit.entity.Customer" autowire="constructor"
+scope="prototype" init-method="init" destroy-method="destroy">
+<constructor-arg name="address" ref="add"> </constructor-arg>
+<!-- <constructor-arg name="customerId" value="122"></constructor-arg>  -->
+<property name="customerId" value="6067"></property>
+<property name="customerName" value="Rakesh"> </property>
+<property name="customerAddress" value="Alld"> </property>
+<property name="billAmount" value="6700"> </property>
+</bean>
+
+</beans>
